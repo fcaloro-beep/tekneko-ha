@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/tekneko-logo.svg" alt="Tekneko" width="420">
+  <img src="https://raw.githubusercontent.com/fcaloro-beep/tekneko-ha/main/assets/tekneko-logo.svg" alt="Tekneko Raccolta" width="420">
 </p>
 
 # Tekneko Raccolta per Home Assistant
