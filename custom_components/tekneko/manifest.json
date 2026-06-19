@@ -1,7 +1,7 @@
 {
   "domain": "tekneko",
   "name": "Tekneko Raccolta",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "documentation": "https://github.com/fcaloro-beep/tekneko-ha",
   "requirements": [],
   "dependencies": [],
