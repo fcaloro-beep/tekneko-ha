@@ -1,4 +1,8 @@
-# Vetralla Tekneko per Home Assistant
+<p align="center">
+  <img src="assets/tekneko-logo.svg" alt="Tekneko" width="420">
+</p>
+
+# Tekneko per Home Assistant
 
 Integrazione non ufficiale per consultare in Home Assistant il calendario della
 raccolta rifiuti e le notizie pubblicate tramite la piattaforma Innovambiente.
