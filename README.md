@@ -9,12 +9,19 @@ raccolta rifiuti e le notizie pubblicate tramite la piattaforma Innovambiente.
 
 ## Funzioni
 
+- calendario mensile delle raccolte, visibile nel pannello Calendario di Home Assistant;
 - prossima raccolta programmata;
 - raccolte previste oggi;
 - sensori binari per ciascun tipo di rifiuto disponibile;
 - ultime notizie del comune;
 - supporto alle zone domestiche e non domestiche;
 - aggiornamento automatico ogni ora.
+
+## Calendario mensile
+
+Dopo aver configurato l'integrazione, apri **Calendario** nella barra laterale
+di Home Assistant e seleziona **Calendario raccolte**. La stessa entità può
+essere aggiunta a una dashboard con la scheda Calendario.
 
 ## Installazione con HACS
 

@@ -9,7 +9,11 @@ from .api import TeknekoApiClient
 from .const import DOMAIN, CONF_CITY_ID, CONF_ZONE_ID
 from .coordinator import TeknekoDataUpdateCoordinator
 
-PLATFORMS: list[Platform] = [Platform.SENSOR, Platform.BINARY_SENSOR]
+PLATFORMS: list[Platform] = [
+    Platform.SENSOR,
+    Platform.BINARY_SENSOR,
+    Platform.CALENDAR,
+]
 
 TeknekoConfigEntry = ConfigEntry
 

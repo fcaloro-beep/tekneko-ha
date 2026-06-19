@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import asyncio
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 import logging
 
 from homeassistant.core import HomeAssistant
@@ -57,3 +57,44 @@ class TeknekoDataUpdateCoordinator(DataUpdateCoordinator):
             return []
         day_str = target_date.strftime("%Y-%m-%d")
         return [e for e in events if e.get("giornoDelMese", "").startswith(day_str)]
+
+    async def async_get_calendar_month(self, year: int, month: int) -> list[dict]:
+        """Return one month from the cache, fetching it when necessary."""
+        key = f"{year}{month:02d}"
+        cached = self._cache["calendar_months"].get(key)
+        if cached is not None:
+            return cached
+
+        events = await self.api.get_calendar(year, month)
+        self._cache["calendar_months"][key] = events
+        return events
+
+    async def async_get_calendar_range(
+        self, start: datetime, end: datetime
+    ) -> list[dict]:
+        """Return collection events in a calendar time range."""
+        months: list[tuple[int, int]] = []
+        cursor = date(start.year, start.month, 1)
+        end_date = end.date()
+        last_date = (end - timedelta(microseconds=1)).date()
+
+        while cursor <= last_date:
+            months.append((cursor.year, cursor.month))
+            cursor = (cursor.replace(day=28) + timedelta(days=4)).replace(day=1)
+
+        month_events = await asyncio.gather(
+            *(self.async_get_calendar_month(year, month) for year, month in months)
+        )
+        start_date = start.date()
+        result: list[dict] = []
+        for events in month_events:
+            for event in events:
+                try:
+                    event_date = date.fromisoformat(
+                        str(event.get("giornoDelMese") or "")[:10]
+                    )
+                except ValueError:
+                    continue
+                if start_date <= event_date < end_date:
+                    result.append(event)
+        return result

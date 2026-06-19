@@ -34,6 +34,11 @@
     }
   },
   "entity": {
+    "calendar": {
+      "collection_calendar": {
+        "name": "Calendario raccolte"
+      }
+    },
     "sensor": {
       "next_collection": {
         "name": "Prossima Raccolta"
