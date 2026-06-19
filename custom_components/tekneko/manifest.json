@@ -1,0 +1,11 @@
+{
+  "domain": "tekneko",
+  "name": "Vetralla Tekneko",
+  "version": "1.0.0",
+  "documentation": "https://github.com/fcaloro-beep/tekneko-ha",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@fcaloro-beep"],
+  "iot_class": "cloud_polling",
+  "config_flow": true
+}

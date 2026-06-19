@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tekneko Raccolta Rifiuti",
+        "description": "Configura l'integrazione per il comune di Vetralla. I valori predefiniti sono per Vetralla.",
+        "data": {
+          "city_id": "ID Comune (1341 per Vetralla)",
+          "zone_id": "ID Zona (1 domestiche, 2 non domestiche)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossibile connettersi all'API",
+      "invalid_zone": "La zona non esiste per il comune selezionato",
+      "unknown": "Errore sconosciuto"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_collection": {
+        "name": "Prossima Raccolta"
+      },
+      "notizie_count": {
+        "name": "Numero Notizie"
+      },
+      "today_collections": {
+        "name": "Raccolte Oggi"
+      }
+    },
+    "binary_sensor": {
+      "today_1": { "name": "Oggi: Compostaggio Domestico" },
+      "today_2": { "name": "Oggi: Rifiuti Ingombranti" },
+      "today_3": { "name": "Oggi: Plastica" },
+      "today_4": { "name": "Oggi: Carta" },
+      "today_5": { "name": "Oggi: Carta e Cartone" },
+      "today_6": { "name": "Oggi: Vetro" },
+      "today_7": { "name": "Oggi: Metalli" },
+      "today_8": { "name": "Oggi: Rifiuti Pericolosi" },
+      "today_9": { "name": "Oggi: Indifferenziato" },
+      "today_10": { "name": "Oggi: Plastica e Metalli" },
+      "today_11": { "name": "Oggi: Organico" },
+      "today_12": { "name": "Oggi: Sfalci e Potature" },
+      "today_13": { "name": "Oggi: Olio Vegetale Esausto" },
+      "today_14": { "name": "Oggi: Abiti e Indumenti Usati" },
+      "today_15": { "name": "Oggi: Pannolini e Pannoloni" },
+      "today_16": { "name": "Oggi: Multimateriale" }
+    }
+  }
+}

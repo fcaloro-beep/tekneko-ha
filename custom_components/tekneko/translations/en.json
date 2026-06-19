@@ -1,0 +1,54 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tekneko Waste Collection",
+        "description": "Configure your municipality waste collection integration. Default values work for Vetralla.",
+        "data": {
+          "city_id": "City ID (1341 for Vetralla)",
+          "zone_id": "Zone ID (1 domestic, 2 non-domestic)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the API",
+      "invalid_zone": "The selected zone does not exist for this city",
+      "unknown": "Unexpected error"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_collection": {
+        "name": "Next Collection",
+        "state_attributes": {
+          "next_date": "Next collection date",
+          "next_collections": "Waste types in next collection"
+        }
+      },
+      "notizie_count": {
+        "name": "News Count"
+      },
+      "today_collections": {
+        "name": "Today Collections"
+      }
+    },
+    "binary_sensor": {
+      "today_1": { "name": "Compostaggio Domestico Today" },
+      "today_2": { "name": "Rifiuti Ingombranti Today" },
+      "today_3": { "name": "Plastica Today" },
+      "today_4": { "name": "Carta Today" },
+      "today_5": { "name": "Carta e Cartone Today" },
+      "today_6": { "name": "Vetro Today" },
+      "today_7": { "name": "Metalli Today" },
+      "today_8": { "name": "Rifiuti Pericolosi Today" },
+      "today_9": { "name": "Indifferenziato Today" },
+      "today_10": { "name": "Plastica e Metalli Today" },
+      "today_11": { "name": "Organico Today" },
+      "today_12": { "name": "Sfalci e Potature Today" },
+      "today_13": { "name": "Olio Vegetale Esausto Today" },
+      "today_14": { "name": "Abiti e Indumenti Usati Today" },
+      "today_15": { "name": "Pannolini e Pannoloni Today" },
+      "today_16": { "name": "Multimateriale Today" }
+    }
+  }
+}
