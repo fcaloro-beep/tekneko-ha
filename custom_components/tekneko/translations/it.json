@@ -3,10 +3,23 @@
     "step": {
       "user": {
         "title": "Tekneko Raccolta Rifiuti",
-        "description": "Configura l'integrazione per il comune di Vetralla. I valori predefiniti sono per Vetralla.",
+        "description": "Seleziona il comune da configurare.",
         "data": {
-          "city_id": "ID Comune (1341 per Vetralla)",
-          "zone_id": "ID Zona (1 domestiche, 2 non domestiche)"
+          "city_id": "Comune"
+        }
+      },
+      "manual_city": {
+        "title": "Altro comune",
+        "description": "Inserisci l'ID Innovambiente del comune.",
+        "data": {
+          "city_id": "ID comune"
+        }
+      },
+      "zone": {
+        "title": "Seleziona zona",
+        "description": "Scegli la zona per {city}.",
+        "data": {
+          "zone_id": "Zona"
         }
       }
     },
@@ -14,6 +27,10 @@
       "cannot_connect": "Impossibile connettersi all'API",
       "invalid_zone": "La zona non esiste per il comune selezionato",
       "unknown": "Errore sconosciuto"
+    },
+    "abort": {
+      "no_zones": "Il comune selezionato non contiene zone configurabili.",
+      "unknown": "La configurazione non è più valida. Riprova."
     }
   },
   "entity": {

@@ -20,11 +20,11 @@ raccolta rifiuti e le notizie pubblicate tramite la piattaforma Innovambiente.
 4. Vai in **Impostazioni → Dispositivi e servizi → Aggiungi integrazione** e
    cerca **Vetralla Tekneko**.
 
-Per Vetralla usa `1341` come ID comune e `1` per le utenze domestiche oppure
-`2` per quelle non domestiche.
+La configurazione mostra un menu per scegliere **Vetralla** e carica
+automaticamente le zone disponibili. Il percorso **Altro comune** permette
+anche di inserire manualmente un ID Innovambiente non ancora incluso nel menu.
 
 ## Note
 
 Il progetto usa endpoint web pubblici ma non ufficialmente documentati. Cambi
 alla piattaforma Innovambiente potrebbero richiedere un aggiornamento.
-

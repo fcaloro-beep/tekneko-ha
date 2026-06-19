@@ -3,10 +3,23 @@
     "step": {
       "user": {
         "title": "Tekneko Waste Collection",
-        "description": "Configure your municipality waste collection integration. Default values work for Vetralla.",
+        "description": "Select the municipality to configure.",
         "data": {
-          "city_id": "City ID (1341 for Vetralla)",
-          "zone_id": "Zone ID (1 domestic, 2 non-domestic)"
+          "city_id": "Municipality"
+        }
+      },
+      "manual_city": {
+        "title": "Other municipality",
+        "description": "Enter the municipality Innovambiente ID.",
+        "data": {
+          "city_id": "Municipality ID"
+        }
+      },
+      "zone": {
+        "title": "Select area",
+        "description": "Choose the area for {city}.",
+        "data": {
+          "zone_id": "Area"
         }
       }
     },
@@ -14,6 +27,10 @@
       "cannot_connect": "Failed to connect to the API",
       "invalid_zone": "The selected zone does not exist for this city",
       "unknown": "Unexpected error"
+    },
+    "abort": {
+      "no_zones": "The selected municipality has no configurable areas.",
+      "unknown": "The configuration is no longer valid. Please try again."
     }
   },
   "entity": {
