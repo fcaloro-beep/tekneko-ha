@@ -20,9 +20,10 @@ raccolta rifiuti e le notizie pubblicate tramite la piattaforma Innovambiente.
 4. Vai in **Impostazioni → Dispositivi e servizi → Aggiungi integrazione** e
    cerca **Vetralla Tekneko**.
 
-La configurazione mostra un menu per scegliere **Vetralla** e carica
-automaticamente le zone disponibili. Il percorso **Altro comune** permette
-anche di inserire manualmente un ID Innovambiente non ancora incluso nel menu.
+La configurazione permette di scegliere tra oltre 300 comuni presenti sulla
+piattaforma Innovambiente e carica automaticamente le relative zone. Il
+percorso **Altro comune** consente anche di inserire manualmente un ID non
+ancora incluso nel catalogo.
 
 ## Note
 

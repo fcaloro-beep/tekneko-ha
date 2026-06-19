@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+from collections import Counter
+import json
+from pathlib import Path
 from typing import Any
 
 import voluptuous as vol
@@ -12,15 +15,33 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.util import dt as dt_util
 
 from .api import TeknekoApiClient
-from .const import CONF_CITY_ID, CONF_ZONE_ID, DOMAIN, SUPPORTED_CITIES
+from .const import CONF_CITY_ID, CONF_ZONE_ID, DOMAIN
 
 MANUAL_CITY = "manual"
+
+
+def _load_city_options() -> dict[str, str]:
+    catalog_path = Path(__file__).with_name("cities.json")
+    with catalog_path.open(encoding="utf-8-sig") as catalog_file:
+        catalog = json.load(catalog_file)
+    name_counts = Counter(item["name"] for item in catalog)
+    return {
+        str(item["id"]): (
+            item["name"]
+            if name_counts[item["name"]] == 1
+            else f"{item['name']} (ID {item['id']})"
+        )
+        for item in catalog
+    }
+
+
+CITY_OPTIONS = _load_city_options()
 
 CITY_SCHEMA = vol.Schema(
     {
         vol.Required(CONF_CITY_ID): vol.In(
             {
-                **{str(city_id): name for city_id, name in SUPPORTED_CITIES.items()},
+                **CITY_OPTIONS,
                 MANUAL_CITY: "Altro comune (ID manuale)",
             }
         )

@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Tekneko Waste Collection",
-        "description": "Select the municipality to configure.",
+        "description": "Select one of the municipalities available on the Innovambiente platform.",
         "data": {
           "city_id": "Municipality"
         }

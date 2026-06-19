@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Tekneko Raccolta Rifiuti",
-        "description": "Seleziona il comune da configurare.",
+        "description": "Seleziona uno dei comuni disponibili sulla piattaforma Innovambiente.",
         "data": {
           "city_id": "Comune"
         }
