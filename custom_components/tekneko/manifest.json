@@ -1,7 +1,7 @@
 {
   "domain": "tekneko",
-  "name": "Vetralla Tekneko",
-  "version": "1.2.0",
+  "name": "Tekneko Raccolta",
+  "version": "1.2.1",
   "documentation": "https://github.com/fcaloro-beep/tekneko-ha",
   "requirements": [],
   "dependencies": [],
